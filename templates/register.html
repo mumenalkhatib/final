@@ -1,8 +1,36 @@
 {% extends "base.html" %}
 
 {% block body %}
-<h1>Register Page</h1>
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
 
-<!-- TODO: implement register page -->
 
+		<h3>Register Form</h3>
+<center>
+		<div class="container">
+			
+			<form action="/home" method="POST">
+
+				<label>First name</label><br>
+				<input type="text" name="f_name" required autocomplete="off"  placeholder="First name"><br>
+
+				<label>Last name</label><br>
+				<input type="text" name="l_name" required autocomplete="off"  placeholder="Last name"><br>
+
+				<label>Email</label><br>
+				<input type="email" name="n_email" required autocomplete="off"  placeholder="Email"><br>
+
+				<label>Password</label><br>
+				<input type="password" name="password" required autocomplete="off" placeholder="Password"><br>
+
+				<label>User name</label><br>
+				<input type="text" name="us_name" required autocomplete="off"  placeholder="User name"><br>
+
+				<label>Personal website link</label><br>
+				<input type="url" name="w_site" required autocomplete="off"  placeholder="Website"><br>
+
+				<input class="sub" title="Sign up" type="submit" value="Sign up"><br><br>
+			</form>
+			
+		</div>
+</center>
 {% endblock %}

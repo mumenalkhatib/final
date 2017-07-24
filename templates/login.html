@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
+
+
+		<h3>Login Form</h3>
+
+		<div class="container">
+			<center>
+			<form action="/home" method="POST">	
+
+				<label>Email</label><br>
+				<input type="email" name="n_email" required autocomplete="off"  placeholder="Email"><br>
+
+				<label>Password</label><br>
+				<input type="password" name="password" required autocomplete="off" placeholder="Password"><br>
+
+				<input class="sub" title="Login" type="submit" value="Login"><br><br>
+				<span>If you don't have an account, </span><a class="reg-log" href="register">Sign up!</a>
+
+			</form>
+			</center>
+		</div>
+
+{% endblock %}

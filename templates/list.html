@@ -1,9 +1,43 @@
 {% extends "base.html" %}
-
+		
 {% block body %}
 
-<h1>List Page</h1>
+<div style="position:absolute">
+	registerTable
+<style type="text/css">
+table, td, tr , th {
+	border: 5px solid black;
+	font-size: 50px;
+}
+</style>	
+<table>
 
-<!-- TODO: implement list page -->
+		<tr>
+			<th>email</th>
+			
+			<th>first name</th>
 
-{% endblock %}
+			<th>last name</th>
+
+			<th>user name</th>
+
+			<th>web site</th>
+		</tr>
+		{% for person in contacts %}
+		<tr>
+			<td>{{person.n_email}}</td>
+
+			<td>{{person.f_name}}</td>
+
+			<td>{{person.l_name}}</td>
+			
+			<td>{{person.us_name}}</td>
+
+			<td>{{person.w_site}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+
+</div>
+
+	{% endblock %}
