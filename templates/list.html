@@ -1,42 +1,47 @@
 {% extends "base.html" %}
 		
 {% block body %}
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
 
-<div style="position:absolute">
-	registerTable
-<style type="text/css">
-table, td, tr , th {
-	border: 5px solid black;
-	font-size: 50px;
-}
-</style>	
-<table>
 
-		<tr>
-			<th>email</th>
-			
-			<th>first name</th>
 
-			<th>last name</th>
 
-			<th>user name</th>
 
-			<th>web site</th>
-		</tr>
-		{% for person in contacts %}
-		<tr>
-			<td>{{person.n_email}}</td>
 
-			<td>{{person.f_name}}</td>
 
-			<td>{{person.l_name}}</td>
-			
-			<td>{{person.us_name}}</td>
 
-			<td>{{person.w_site}}</td>
-		</tr>
-		{% endfor %}
-	</table>
+
+
+
+	{% for person in contacts %}
+
+	<div class="containers">
+<br>
+<div class="card">
+
+
+
+    <h1>{{person.f_name}} {{person.l_name}}</h1>
+    <p class="title">{{person.us_name}}</p>
+    <p>{{person.n_email}}</p>
+	<a href="{{person.w_site}}" target="_blank"><button>site</button></a>
+
+  </div>
+
+
+	{% endfor %}
+
+
+
+
+
+</div>
+
+
+
+
+
+
 
 </div>
 

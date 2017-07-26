@@ -1,9 +1,35 @@
 {% extends "base.html" %}
 
 {% block body %}
+	<link rel="stylesheet" type="text/css" href="../static/style.css">
 
-<h1>Feed Page</h1>
+<body bgcolor="#009688">
+<center>
+		<div class="container">
 
-<!-- TODO: implement feed page -->
+			<h1>Posting form</h1>
+			<form action="/feed" method="POST">
 
+				<label>User name</label><br>
+				<input type="text" name="us_name" required autocomplete="off"  placeholder="User name"><br>
+
+				<label>The post</label><br>
+				<textarea type="text" name="post" required autocomplete="off"  placeholder="Write your post here"></textarea><br>
+
+				<input class="sub" title="Post" type="submit" value="Post"><br><br>
+			</form>
+
+			{% for pos in post %}
+			<div class="cls2">
+				<p class="cls3">Posted by {{pos.us_name}}</p>
+				<p class="cls3">{{pos.post}}</p>
+				<p class="cls3">{{pos.time}}</p>
+			</div><br>
+			{% endfor %}
+
+
+
+		</div>
+</center>
+</body>
 {% endblock %}

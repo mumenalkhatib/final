@@ -3,12 +3,11 @@
 {% block body %}
 	<link rel="stylesheet" type="text/css" href="../static/style.css">
 
-
-		<h3>Register Form</h3>
+<body bgcolor="#009688">
 <center>
 		<div class="container">
-			
-			<form action="/home" method="POST">
+			<h1>Sign up form</h1>
+			<form action="/register" method="POST">
 
 				<label>First name</label><br>
 				<input type="text" name="f_name" required autocomplete="off"  placeholder="First name"><br>
@@ -17,7 +16,7 @@
 				<input type="text" name="l_name" required autocomplete="off"  placeholder="Last name"><br>
 
 				<label>Email</label><br>
-				<input type="email" name="n_email" required autocomplete="off"  placeholder="Email"><br>
+				<input type="email" name="n_email" required autocomplete="off"  placeholder="E-mail"><br>
 
 				<label>Password</label><br>
 				<input type="password" name="password" required autocomplete="off" placeholder="Password"><br>
@@ -33,4 +32,5 @@
 			
 		</div>
 </center>
+</body>
 {% endblock %}
