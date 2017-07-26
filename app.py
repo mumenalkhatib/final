@@ -9,11 +9,14 @@ def reset_db():
 	posts = db['posts']
 	posts.drop()
 
-#reset_db()
-#print crash()
+# reset_db()
+# print crash()
+
 
 @app.route('/register' ,methods=["GET" , "POST"])
 def registerpage():
+	registerTable = db["register"]
+	allr = list(registerTable.all())[::-1]
 	if request.method == 'GET':
 		return render_template('register.html')
 	else :
@@ -25,16 +28,18 @@ def registerpage():
 		us_name=form["us_name"]
 		w_site=form["w_site"]
 
-		registerTable = db["register"]
 		entry = {"n_email":n_email ,"password":password , "f_name":f_name , "l_name":l_name , "us_name":us_name , "w_site":w_site }
 
 		NameToCheck = us_name
 		print len(list(registerTable.find(us_name=NameToCheck)))
 		if len(list(registerTable.find(us_name=NameToCheck))) == 0:
 			registerTable.insert(entry)
+			allr = list(registerTable.all())[::-1]
 			return redirect('/feed')
 		else:
 			return redirect('/error')
+
+
 
 @app.route('/feed', methods=["GET", "POST"])
 def feedpage():
@@ -42,13 +47,12 @@ def feedpage():
 	postsTable = db["posts"]
 	allposts = list(postsTable.all())[::-1]
 	if request.method == 'GET':
-
 		return render_template('feed.html', post=allposts)
 	else :
 		form =request.form
 		post =form["post"]
 		us_name=form["us_name"]
-		time_string = time.strftime('%I:%M %p on %b %d, %Y')
+		time_string = time.strftime('%l:%M %p on %b %d, %Y')
 
 		entry = {"post":post ,"us_name":us_name , "time":time_string}
 

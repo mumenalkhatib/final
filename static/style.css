@@ -10,7 +10,7 @@ ul {
     padding: 0;
     overflow: hidden;
     border: 1px solid #e7e7e7;
-    background-color: #f2f3f2;
+    background-color: #f2f2f2;
 }
 
 li {
@@ -27,16 +27,15 @@ li a {
 li a:hover:not(.active) {
     background-color: #ddd;
 }
-
-li a.active {
-    color: white;
-    background-color: #008CBA;
+#SU{
+  float: right;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
-.reg-log a{
-	color: blue;
-	font-size: 20px;
 
-}
 input, textarea{
 	width: 50%;
 	max-width: 80%;
@@ -54,6 +53,9 @@ input, textarea{
 	width: 50%;
 	background-color: #f2f2f2;
 	padding: 20px;
+  margin-top: 5%;
+  margin-bottom: 12px;
+
 }
 .sub {
 	background-color: #009688;
@@ -68,26 +70,25 @@ input, textarea{
 }
 
 .cls {
-	position: absolute;
+  margin-top:5% ; 
 }
+
 .cls2{
 	font-weight: bold;
 	border: 5px solid black;
 }
 
 .card {
-	float: left;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	background-color: #f2f2f2;
 	width: 300px;
 	max-width: 270px;
-	height: 200px
-;	margin: auto;
+	height: 200px;
+	margin: auto;
 	text-align: center;
 	font-family: arial;
 	padding: 1px;
 	border-radius: 5px;
-	border: solid red 10px;
 }
 
 .containers {
@@ -101,8 +102,33 @@ input, textarea{
 }
 
 .title {
-  color: gray;
+  font-weight: bold;
+  color: black;
   font-size: 18px;
+  text-align: left;
+}
+
+.title1 {
+  color: black;
+  font-size: 18px;
+}
+
+.title2 {
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+  text-align: left;
+  padding-bottom:100px;
+  padding-top: 100px;
+}
+.title3 {
+  font-weight: bold;
+  color: black;
+  font-size: 18px;
+  text-align: left;
+  padding-bottom:100px;
+  padding-top: 130px;
+  padding-left: 40px;
 }
 
 button {
@@ -128,17 +154,49 @@ button:hover, a:hover {
   opacity: 0.7;
 }
 .content{
-    margin-top: 4.5%;
+    margin-top: 5.5%;
+    margin-bottom: -5%;
     text-align: center;
-    width: 67.5%;
-    padding: 25px 50px 30px 50px;
+    width: 93,5%;
+    padding: 25px 50px 40px 30px;
     background-color: #ddd;
     font-size: 120%;
     color: black;
     border-radius: 20px;
 }
-#CFP{
-	background: url(CFP.jpg);
-	width: 200px;
-	height: 200px;
+#logo{
+  width: 1200px;
+  height:160px;
+  border-radius: 10px;
+}
+#door{
+  width: 400px;
+  height: 300px;
+  float: left;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+#roof{
+  width: 400px;
+  height: 300px;
+  float: right;
+  border-radius: 10px;
+}
+
+#mumen{
+  width: 400px;
+  height: 300px;
+  float: right;
+  border-radius: 10px;
+  display: block;
+  padding-left: 30px;
+}
+
+#ajaj{
+  width: 260px;
+  height: 350px;
+  float: left;
+  border-radius: 10px;
+  display: block;
+  padding-right: 30px;
 }

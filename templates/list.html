@@ -4,25 +4,18 @@
 	<link rel="stylesheet" type="text/css" href="../static/style.css">
 
 
-<body bgcolor="#009688">
 
-
-<ul>
-  <li><a href="home">Home</a></li>
-  <li><a href="feed">Feed</a></li>
-  <li><a href="list">List</a></li>
-</ul>
-
+<div id="list">
 	{% for person in contacts %}
 
-	<div class="containers">
+<div class="containers">
 <br>
 <div class="card">
 
 
 
     <h1>{{person.f_name}} {{person.l_name}}</h1>
-    <p class="title">{{person.us_name}}</p>
+    <p class="title1">{{person.us_name}}</p>
     <p>{{person.n_email}}</p>
 	<a href="{{person.w_site}}" target="_blank"><button>site</button></a>
 
@@ -36,13 +29,5 @@
 
 
 </div>
-
-
-
-
-
-
-
 </div>
-
 	{% endblock %}
