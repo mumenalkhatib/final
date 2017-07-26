@@ -56,6 +56,7 @@ def feedpage():
 		print len(list(registerTable.find(us_name=NameToCheck)))
 		if len(list(registerTable.find(us_name=NameToCheck))) > 0:
 			postsTable.insert(entry)
+			allposts = list(postsTable.all())[::-1]
 			return render_template('feed.html', post=allposts )
 		else:
 			return redirect('/register')
