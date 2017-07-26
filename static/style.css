@@ -1,13 +1,13 @@
 ul {
-	top:0;
+    top:0;
     left:0;
     right:0;
     bottom:0;
-	position:fixed;
+    position:fixed;
     height:8%;
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding:0px;
     overflow: hidden;
     border: 1px solid #e7e7e7;
     background-color: #f2f2f2;
@@ -79,27 +79,20 @@ input, textarea{
 }
 
 .card {
+
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 	background-color: #f2f2f2;
 	width: 300px;
 	max-width: 270px;
 	height: 200px;
-	margin: auto;
+  margin: auto;
 	text-align: center;
 	font-family: arial;
-	padding: 1px;
 	border-radius: 5px;
+  padding-bottom: 8px;
 }
 
-.containers {
-  padding: 0 16px;
-}
 
-.containers::after {
-  content: "";
-  clear: both;
-  display: table;
-}
 
 .title {
   font-weight: bold;
@@ -142,6 +135,7 @@ button {
   cursor: pointer;
   width: 100%;
   font-size: 18px;
+  border-radius: 5px;
 }
 
 a {
@@ -155,7 +149,7 @@ button:hover, a:hover {
 }
 .content{
     margin-top: 5.5%;
-    margin-bottom: -5%;
+    margin-bottom: -3%;
     text-align: center;
     width: 93,5%;
     padding: 25px 50px 40px 30px;
@@ -164,6 +158,8 @@ button:hover, a:hover {
     color: black;
     border-radius: 20px;
 }
+
+
 #logo{
   width: 1200px;
   height:160px;

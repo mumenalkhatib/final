@@ -4,30 +4,23 @@
 	<link rel="stylesheet" type="text/css" href="../static/style.css">
 
 
-
-<div id="list">
-	{% for person in contacts %}
-
-<div class="containers">
-<br>
-<div class="card">
+<br><br>
+{% for person in contacts %}
 
 
+<div >
+  <br><div class="card"><br>
 
     <h1>{{person.f_name}} {{person.l_name}}</h1>
     <p class="title1">{{person.us_name}}</p>
     <p>{{person.n_email}}</p>
-	<a href="{{person.w_site}}" target="_blank"><button>site</button></a>
+    <a href="{{person.w_site}}" target="_blank"><button>site</button></a>
 
   </div>
-
+</div>
 
 	{% endfor %}
 
 
 
-
-
-</div>
-</div>
-	{% endblock %}
+{% endblock %}
