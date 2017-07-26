@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<head>
+
+{% block body %}
 	<link rel="stylesheet" type="text/css" href="../static/style.css">
+
 <ul>
-  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="home">Home</a></li>
   <li><a href="feed">Feed</a></li>
   <li><a href="list">List</a></li>
 </ul>
-</head>
-<body background="../static/bg-hom.jpg">
+
+
 <div class="content">
 	<div id="CFP"></div>
 
@@ -16,12 +18,4 @@
 
 </div>
 
-
-
-
-
-
-</div>
-</div>
-</body>
 {% endblock %}

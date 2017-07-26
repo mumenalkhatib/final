@@ -1,7 +1,3 @@
-body{
-	background-attachment: fixed;
-}
-
 ul {
 	top:0;
     left:0;
@@ -143,8 +139,6 @@ button:hover, a:hover {
 }
 #CFP{
 	background: url(CFP.jpg);
-	position: absolute;
 	width: 200px;
 	height: 200px;
-	float: right;
 }
