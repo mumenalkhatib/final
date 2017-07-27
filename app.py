@@ -9,8 +9,8 @@ def reset_db():
 	posts = db['posts']
 	posts.drop()
 
-# reset_db()
-# print crash()
+#reset_db()
+#print crash()
 
 
 @app.route('/register' ,methods=["GET" , "POST"])
